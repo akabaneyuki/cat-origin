@@ -1,0 +1,27 @@
+@use "../../../00_global/" as g;
+
+.c-submit {
+  @include g.base-font;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid g.$base-color;
+  border-radius: 25px;
+  padding-left: 0.2em;
+  width: 236px;
+  height: 50px;
+  letter-spacing: 0.2em;
+  font-size: 16px;
+  font-weight: 700;
+  color: g.$base-color;
+  background-color: #FFFFFF;
+
+  @include g.mq-max(ta) {
+    width: 224px;
+    height: 44px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

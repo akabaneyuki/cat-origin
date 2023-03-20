@@ -1,0 +1,60 @@
+@use "../../00_global/" as g;
+
+.c-breadcrumbs {
+    background-color: #F8F8F8;
+    padding: 8px 0;
+
+    &_wrap {
+        display: flex;
+        gap: 28px;
+        max-width: 1086px;
+        // max-width: 1004px;
+        margin: 0 auto;
+        padding: 0 56px;
+        // padding: 0 12px;
+        white-space: nowrap;
+        @include g.base-font;
+
+        @include g.mq-max(ta) {
+            gap: 20.46px;
+            padding: 0 3px 0 12px;
+        }
+
+        &_nav {
+            position: relative;
+            color: #787878;
+            letter-spacing: .1em;
+            line-height: 2.14;
+            font-size: 14px;
+
+            @include g.mq-max(ta) {
+                font-size: 12px;
+                line-height: 2.15;
+            }
+
+            & a {
+                color: g.$base-color;
+                text-decoration: underline;
+
+                &::after {
+                    position: absolute;
+                    content: "〉";
+                    top: 50%;
+                    right: -10px;
+                    transform: translate(100%, -50%);
+                    color: #787878;
+
+                    @include g.mq-max(ta) {
+                        right: -6px;
+                    }
+                }
+            }
+
+            &:last-child {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

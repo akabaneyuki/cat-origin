@@ -1,0 +1,152 @@
+@use "./../00_global/" as g;
+
+.l-footer {
+    background-color: g.$base-color;
+
+    &_wrap {
+        display: grid;
+        grid-template-columns: 206px 1fr 387.06px;
+        grid-template-rows: auto;
+        column-gap: 47px;
+        row-gap: 58px;
+        max-width: 1004px;
+        padding: 40px 12px 53px;
+        margin: 0 auto;
+
+        @include g.mq-max(ta) {
+            grid-template-columns: 1fr 42px;
+            padding: 44px 12px 38px;
+            row-gap: 29.63px;
+        }
+
+        &_logo {
+            max-width: 205.97px;
+
+            & img {
+                width: 100%;
+            }
+        }
+
+        &_fb {
+            max-width: 30.95px;
+            margin-left: auto;
+            padding-top: 11px;
+            height: fit-content;
+
+            @include g.mq-max(ta) {
+                padding-top: 31px;
+                margin-right: 8px;
+            }
+        }
+
+        &_navs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 25px 0;
+            max-width: 980px;
+            padding-top: 13px;
+            margin: 0 auto;
+            text-align: center;
+
+            @include g.mq-max(ta) {
+                grid-column: 1 / -1;
+                gap: 0;
+                width: 100%;
+                padding-top: 0;
+            }
+
+            &_nav {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 0 20.28px;
+                // border-right: dashed 3px #ffffff;
+                color: #ffffff;
+                letter-spacing: .05em;
+                height: 19px;
+                font-weight: 700;
+                font-size: 16px;
+                @include g.sub-font;
+
+                &:nth-of-type(1), &:nth-of-type(5) {
+                    padding-left: 0;
+                }
+
+                &:nth-of-type(4) {
+                    padding-right: 0;
+
+                    &::before {
+                        background-image: none;
+                    }
+                }
+
+                &:last-child {
+                    border-right: none;
+
+                    &::before {
+                        background-image: none;
+                    }
+                }
+
+                @include g.mq-max(ta) {
+                    position: relative;
+                    width: 100%;
+                    padding: 16px 0px 14px;
+                    height: initial;
+                    line-height: 1.018;
+                    border-right: none;
+                    background-image: linear-gradient(to right, #ffffff 3px, transparent 3px);
+                    background-size: 6px 3px;
+                    background-repeat: repeat-x;
+                    background-position: left bottom;
+                    letter-spacing: .1em;
+                    font-weight: 700;
+                    color: #ffffff;
+                    font-size: 16px;
+                }
+
+                &::before {
+                    position: absolute;
+                    right: 0;
+                    content: "";
+                    background-image: url("../images/footer/line.png");
+                    background-size: contain;
+                    width: 3px;
+                    height: 18px;
+
+                    @include g.mq-max(ta) {
+                        background-image: none;
+                    }
+                }
+
+                &::after {
+
+                    @include g.mq-max(ta) {
+                        position: absolute;
+                        top: 50%;
+                        right: -6px;
+                        transform: translate(0, -50%);
+                        background-image: none;
+                        content: "〉";
+                        font-size: 16px;
+                        line-height: 1.47;
+                    }
+                }
+            }
+        }
+
+        &_copyright {
+            grid-column: 1 / -1;
+            line-height: 1.48;
+            text-align: center;
+            font-size: 11px;
+            color: #ffffff;
+            @include g.base-font;
+
+            @include g.mq-max(ta) {
+                margin-top: 32px;
+            }
+        }
+    }
+}

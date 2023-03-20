@@ -1,0 +1,90 @@
+@use "../../../00_global/" as g;
+
+.p-recruit_style {
+    position: relative;
+    background-color: g.$bg-gray;
+
+    &_wrap {
+        max-width: 1004px;
+        padding: 110px 12px;
+        margin: 0 auto;
+
+        &_items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 43px;
+            margin-top: 85px;
+
+            @include g.mq-max(ta) {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                row-gap: 88px;
+                margin-top: 86px;
+            }
+
+            &_item {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @include g.mq-max(ta) {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                &_icatch {
+                    margin-bottom: 13px;
+                    padding: 14px 25px;
+
+                    @include g.mq-max(ta) {
+                        margin-bottom: 0;
+                        padding: 21px 51px;
+                    }
+
+                    &_img{
+                        border-radius: 50%;
+                    }
+                }
+
+                &_ttl {
+                    margin-bottom: 17px;
+                    text-align: center;
+                    line-height: 1.66;
+                    // letter-spacing: .1em;
+                    font-weight: 700;
+                    color: g.$base-color;
+                    @include g.sub-font;
+                    font-size: 24px;
+
+                    @include g.mq-max(ta) {
+                        font-size: 22px;
+                        margin-bottom: 0;
+                    }
+                }
+
+                &_text {
+                    padding: 0 3px;
+                    letter-spacing: .05em;
+                    @include g.base-font;
+                    font-size: 16px;
+                    color: #231815;
+                    line-height: 1.56;
+                    text-align: justify;
+
+                    @include g.mq-max(ta) {
+                        padding: 0;
+                        line-height: 1.625;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-catchcopy{
+        margin: 0 auto 70px;
+
+        @include g.mq-max(ta){
+            margin-bottom: 86px;
+        }
+    }
+}

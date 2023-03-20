@@ -1,0 +1,102 @@
+@use "./../../../00_global/" as g;
+
+.p-top_sec1 {
+    margin-bottom: 110px;
+    @include g.mq-max(ta){
+        margin: 110px auto;
+        padding: 0 12px;
+        
+    }
+
+    &_bar {
+        margin: 0 auto;
+        margin-bottom: 64px;
+        width: 3px;
+        background-color: g.$base-color;
+        height: 46px;
+        border-radius: 5px;
+        @include g.mq-max(ta){
+            height: 34px;
+            margin-bottom: 37px;
+        }
+        
+    }
+
+    &_wrap {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 979px;
+        width: 100%;
+        @include g.mq-max(ta){
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 500px;
+        }
+    }
+
+    &_img {
+        margin-top: 9px;
+        max-width: 489px;
+        width: 100%;
+        @include g.mq-max(ta){
+            max-width: 500px;
+        }
+    }
+
+    &_textbox {
+        max-width: 449px;
+        width: 100%;
+        @include g.mq-max(ta){
+            max-width: 500px;
+        }
+
+        &_title{
+            margin-bottom: 24px;
+            color: g.$base-color;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 40px;
+            @include g.sub-font;
+            @include g.mq-max(ta){
+                margin: 0 auto;
+                text-align: center;
+                font-size: 22px;
+                line-height: 35px;
+                
+            }
+        }
+
+        &_text {
+            width: 100%;
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.05rem;
+            text-align: justify;
+            @include g.base-font;
+            color: #3E3733;
+            @include g.mq-max(ta){
+                line-height: 26px;
+            }
+        }
+
+    }
+
+    &_sp{
+        display: none;
+        @include g.mq-max(ta){
+            margin: 0 auto 28px;
+            display: inline-block;
+            max-width: 500px;
+            width: 100%;
+
+        }
+    }
+
+    &_pc{
+        display: inline-block;
+        @include g.mq-max(ta){
+            display: none;
+        }
+    }
+}

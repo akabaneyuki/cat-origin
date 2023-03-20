@@ -1,0 +1,82 @@
+@use "../../../00_global/" as g;
+
+.p-recruit_msg {
+    &_inner{
+        padding: 0 20px;
+        margin: 150px auto 110px;
+        // margin: 110px auto;
+        max-width: 1018px;
+
+        @include g.mq_max(sp){
+            padding: 0 9px;
+            margin: 132px auto 33px;
+        }
+    }
+
+    &_flex{
+        display: flex;
+        justify-content: space-between;
+
+        @include g.mq_max(ta){
+            display: block;
+        }
+
+        &_left{
+            max-width: 449px;
+            width: 55%;
+            border-radius: 0 30px;
+            height: auto;
+            object-fit: cover;
+
+            @include g.mq_max(ta){
+                margin: 42px auto 36px;
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        &_right{
+            max-width: 449px;
+            margin-left: 15px;
+
+            @include g.mq_max(ta){
+                margin: 0 auto;
+                max-width: 600px;
+            }
+
+            &_ttl{
+                margin-bottom: 34px;
+                color: g.$base-color;
+                font-size: g.$highlight-text-large;
+                font-weight: bold;
+                line-height: 1.66;
+                @include g.sub-font;
+                // letter-spacing: ;
+
+                @include g.mq_max(ta){
+                    text-align: center;
+                    font-size: 22px;
+                    line-height: 1.5;
+                }
+            }
+
+            &_txt{
+                color: g.$text-color;
+                font-size: g.$base-text;
+                font-weight: 400;
+                line-height: 1.5625;
+                letter-spacing: .05em;
+                text-align: justify;
+                @include g.base-font;
+            }
+        }
+    }
+
+    .c-catchcopy{
+        margin: 0 auto 80px;
+
+        @include g.mq-max(ta){
+            margin-bottom: 41px;
+        }
+    }
+}

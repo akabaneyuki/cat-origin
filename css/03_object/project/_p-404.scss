@@ -1,0 +1,55 @@
+@use "../../00_global/" as g;
+
+.p-404 {
+  width: 100vw;
+  height: 100vh;
+
+  &_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+    width: 428px;
+    height: 355px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    @include g.mq-max(sp) {
+      width: 287px;
+      height: 250px;
+    }
+  }
+
+  &_logo {
+    width: 214px;
+
+    @include g.mq-max(sp) {
+      width: 168px;
+    }
+  }
+
+  &_coming {
+    width: 201px;
+
+    @include g.mq-max(sp) {
+      width: 174px;
+    }
+  }
+
+  &_text {
+    @include g.sub-font;
+    font-weight: 700;
+    font-size: g.$highlight-text-large;
+    color: #584D47;
+    line-height: 42.5px;
+    letter-spacing: 0.875px;
+    text-align: center;
+
+    @include g.mq-max(sp) {
+      font-size: g.$base-text;
+      line-height: 26px;
+    }
+  }
+}

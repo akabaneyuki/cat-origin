@@ -1,0 +1,164 @@
+@use "./../../../00_global/" as g;
+
+.p-top_contact {
+    padding: 110px 0;
+    @include g.mq-max(ta){
+        padding: 140px 11px 200px;
+    }
+
+    &_wrap {
+        max-width: 978.32px;
+        width: 100%;
+        margin: 0 auto;
+
+        @include g.mq-max(ta){
+            max-width: 500px;
+        }
+
+    }
+
+    &_title {
+        margin-bottom: 36px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.05em;
+        @include g.sub-font;
+        color: g.$base-color;
+        @include g.mq-max(ta){
+            margin-bottom: 40px;
+            font-size: 26px;
+
+        }
+
+        &-light {
+            margin-bottom: 5px;
+            color: g.$base-color;
+            font-size: 40px;
+            @include g.base-font;
+            opacity: 0.2;
+            line-height: 40px;
+        }
+    }
+
+    &_text {
+        font-size: g.$base-text;
+        @include g.base-font;
+        line-height: 25px;
+        letter-spacing: 0.05em;
+        color: #584D47;
+        @include g.mq-max(ta){
+            padding: 0 1px;
+        }
+
+        &-center {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &_contents {
+        margin: 72px auto 85px;
+        display: flex;
+        justify-content: space-between;
+        @include g.mq-max(ta){
+            flex-wrap: wrap;
+            margin:42px auto 0px;
+        }
+    }
+
+    &_dialBox {
+        padding: 21px 0 28px;
+        max-width: 456.32px;
+        width: 100%;
+        background-color: #FAF6F4;
+        border-radius: 0 20px 0 20px;
+        @include g.mq-max(ta){
+            margin: 0 auto 39px;
+        }
+
+        &_title {
+            margin-bottom: 14px;
+            font-size: g.$base-text;
+            @include g.sub-font;
+            line-height: 40px;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            text-align: center;
+            @include g.mq-max(ta){
+                margin-bottom: 8.59px;
+                line-height: 35.1px;
+            }
+            &-green {
+                color: #389C4E;
+            }
+            &-orange {
+                color: #ED6102;
+                @include g.mq-max(ta){
+                    line-height: 22.1px;
+                }
+            }
+
+        }
+
+        &_img {
+            margin: 0 auto 10px;
+            width: 337.08px;
+            height: 40.18px;
+            @include g.mq-max(ta){
+                margin: 0 auto 6px;
+                width: 258.34px;
+                height: 36px;
+            }
+
+        }
+        
+        &_text{
+            font-size: 14px;
+            @include g.base-font;
+            letter-spacing: 0.05em;
+            line-height: 23px;
+            text-align: center;
+            color: #584D47;
+            @include g.mq-max(ta){
+                font-size: 12px;
+            }
+        }
+
+        .c-button{
+            margin: 21px auto 0;
+            @include g.mq-max(ta){
+                margin: 14px auto 0;
+            }
+        }
+
+        .c-button_inner{
+            @include g.mq-max(ta){
+                font-size: g.$base-text;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+    &_btn{
+        display: inline-block;
+        color: #584D47;
+        text-decoration: underline;
+    }
+
+    &_pc{
+        display: block;
+        @include g.mq-max(ta){
+            display: none;
+        }
+    }
+
+    &_sp{
+        display: none;
+        @include g.mq-max(ta){
+            display: block;
+        }
+    }
+
+}

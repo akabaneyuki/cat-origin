@@ -1,0 +1,87 @@
+@use "../../../00_global/" as g;
+
+.c-checkbox {
+  &-readonly {
+    pointer-events: none;
+
+    .c-checkbox_text {
+      a {
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .wpcf7-form-control-wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .wpcf7-list-item {
+      margin-left: 0;
+
+      input:checked + .wpcf7-list-item-label > .c-checkbox_box  {
+        background-color: g.$base-color;
+
+        &::before {
+          content: "";
+          display: block;
+          margin-top: 3px;
+          margin-left: 3px;
+          width: 18px;
+          height: 18px;
+          background-image: url("./../images/contact/check.svg");
+        }
+      }
+
+      .wpcf7-list-item-label {
+        display: flex;
+        align-items: center;
+
+        .c-checkbox_box {
+          cursor: pointer;
+          display: block;
+          margin-right: 11px;
+          border-radius: 3px;
+          width: 24px;
+          height: 24px;
+          background-color: #D9D9D9;
+        }
+
+        .c-checkbox_text {
+          @include g.base-font;
+          cursor: pointer;
+          display: flex;
+          line-height: 25px;
+          letter-spacing: 0.1em;
+          font-size: 16px;
+          color: #3E3733;
+
+          @include g.mq-max(ta) {
+            display: inline;
+          }
+
+          a {
+            @include g.base-font;
+            margin-right: 3px;
+            color: #3E3733;
+            text-decoration: underline;
+
+            @include g.mq-max(ta) {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+
+    .wpcf7-not-valid-tip {
+      @include g.base-font;
+      margin-bottom: 3px;
+      line-height: 25px;
+      letter-spacing: 0.1em;
+      font-size: 16px;
+      font-weight: 500;
+      color: #E45C5C;
+    }
+  }
+}

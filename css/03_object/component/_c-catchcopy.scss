@@ -1,0 +1,36 @@
+@use "../../00_global/" as g;
+
+.c-catchcopy {
+    width: fit-content;
+
+    &_text {
+        margin-left: 2px;
+        margin-right: -4px;
+        @include g.sub-font;
+        font-size: g.$title-small;
+        color: g.$base-color;
+        font-weight: bold;
+        letter-spacing: .2em;
+        line-height: 40px;
+
+        @include g.mq-max(ta) {
+            margin: 0;
+            font-size: 26px;
+            letter-spacing: .05em;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        margin-top: 12px;
+        width: 100%;
+        height: 3px;
+        background-color: g.$base-color;
+        border-radius: 1.5px;
+
+        @include g.mq-max(ta) {
+            margin-top: 9px;
+        }
+    }
+}

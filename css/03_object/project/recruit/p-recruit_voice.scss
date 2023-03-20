@@ -1,0 +1,146 @@
+@use "../../../00_global/" as g;
+
+.p-recruit_voice {
+    background-color: g.$bg-gray;
+
+    &_contents {
+        max-width: 1366px;
+        margin: 0 auto;
+        padding: 110px 20px;
+
+        @include g.mq-max(ta) {
+            padding: 107px 0 58px;
+            // padding: 107px 52px 110px;
+        }
+
+        &_wrap {
+            position: relative;
+            display: flex;
+            width: 981.23px;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            @include g.mq-max(ta) {
+                display: block;
+                // max-width: 600px;
+                width: 100%;
+            }
+
+            &_box {
+                width: 295.23px;
+                font-weight: bold;
+
+                @include g.mq-max(ta) {
+                    width: 100%;
+                    // max-width: 600px;
+                    margin: 124px 31px 0;
+                }
+
+                @include g.mq-max(sp) {
+                    margin: 124px 15px 0;
+                }
+
+                &:nth-of-type(2){
+                    .p-recruit_voice_contents_wrap_box_ttl{
+                        // width: 309px;
+                        letter-spacing: -.02em;
+                    }
+                }
+
+                &_img {
+                    width: 100%;
+                    border-radius: 0 20px;
+                    // object-fit: cover;
+
+                    @include g.mq-max(ta) {
+                        max-width: 600px;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                }
+
+                &_ttl {
+                    margin-top: 36px;
+                    font-size: g.$highlight-text-small;
+                    @include g.sub-font;
+                    line-height: 1.75;
+                    color: g.$base-color;
+                    text-align: center;
+
+                    @include g.mq-max(sp) {
+                        margin-top: 17px;
+                        font-size: g.$base-text;
+                        line-height: 1.625;
+                    }
+                }
+
+                &_txt {
+                    margin-top: 36px;
+                    @include g.base-font;
+                    font-size: g.$base-text;
+                    line-height: 25px;
+                    letter-spacing: .05em;
+                    color: g.$text-color;
+                    font-weight: 400;
+                    text-align: justify;
+
+                    @include g.mq-max(ta) {
+                        max-width: 600px;
+                        margin: 17px auto 0;
+                    }
+                }
+
+                &_btn {
+                    margin: 28px auto 0;
+                }
+            }
+
+            &_btn{
+                position: absolute;
+                top: 0;
+                left: 44px;
+                z-index: 1;
+                width: 60px;
+
+                @include g.mq-max(sp){
+                    width: auto;
+                }
+
+                &-next{
+                    right: 44px;
+                    left: auto;
+                }
+            }
+
+            .slick-num{
+                display: none;
+                @include g.sub-font;
+                font-weight: 500;
+
+                @include g.mq-max(ta){
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: calc(50% - 24px);
+                    font-size: g.$highlight-text-large;
+                    color: g.$text-color;
+                    line-height: 2.5;
+                    letter-spacing: .05em;
+                }
+
+                @include g.mq-max(sp){
+                    left: calc(50% - 16px);
+                    font-size: g.$base-text;
+                }
+            }
+        }
+    }
+
+    .c-catchcopy{
+        margin: 0 auto 69px;
+
+        @include g.mq-max(ta){
+            margin-bottom: 42px;
+        }
+    }
+}

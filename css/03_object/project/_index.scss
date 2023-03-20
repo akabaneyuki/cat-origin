@@ -1,0 +1,28 @@
+// コンポーネントが集まったブロックや大きなエリア
+// p-○○
+
+@use "./p-404";
+
+//top
+@use "./top/p-top_contact";
+@use "./top/p-top_business";
+@use "./top/p-top-recruit";
+@use "./top/p-top_company";
+@use "./top/p-top_fv";
+@use "./top/p-top_sec1";
+// recruit
+@use "./recruit/p-recruit_msg";
+@use "./recruit/p-recruit_style";
+@use "./recruit/p-recruit_detail";
+@use "./recruit/p-recruit_voice";
+@use "./recruit/p-recruit_jobDescription";
+
+//contact
+@use "./contact/c-inputText";
+@use "./contact/c-checkbox";
+@use "./contact/c-submit";
+@use "./contact/p-form";
+@use "./contact/p-thanks";
+
+// privacy
+@use "./p-privacy";

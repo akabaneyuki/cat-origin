@@ -1,0 +1,108 @@
+@use "../../../00_global/" as g;
+
+.p-recruit_detail {
+    width: 100%;
+
+    &_content {
+        max-width: 1004px;
+        padding: 110px 12px;
+        margin: 0 auto;
+
+        @include g.mq-max(ta) {
+            max-width: 624px;
+        }
+
+        &_flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 103px;
+
+            @include g.mq-max(ta) {
+                margin-bottom: 84px;
+            }
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            &:first-of-type{
+                .p-recruit_detail_content_flex_img {
+                    @include g.mq-max(ta) {
+                        object-position: center;
+                    }
+                }
+            }
+
+            &_img {
+                width: 450px;
+                object-fit: cover;
+                border-radius: 0 30px;
+
+                @include g.mq-max(ta) {
+                    max-width: 600px;
+                    width: 100%;
+                    height: 400px;
+                    margin: 32px auto 39px;
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+
+                @include g.mq-max(sp) {
+                    border-radius: 0 10px;
+                    height: 300px;
+                    object-position: center;
+                }
+
+                @media screen and (max-width:400px) {
+                    height: 230px;
+                    object-position: bottom;
+                }
+            }
+
+            
+            &_box {
+                width: 450px;
+
+                @include g.mq-max(ta) {
+                    width: 100%;
+                }
+
+                &_title {
+                    @include g.sub-font;
+                    color: g.$base-color;
+                    font-size: g.$highlight-text-large;
+                    font-weight: bold;
+                    // letter-spacing: 0.05em;
+                    line-height: 1.25;
+
+                    @include g.mq-max(ta) {
+                        margin-top: 0;
+                        padding-top: 0;
+                        text-align: center;
+                    }
+                }
+
+                &_text {
+                    margin-top: 24px;
+                    font-size: g.$base-text;
+                    text-align: justify;
+                    line-height: 1.5625;
+                    letter-spacing: .05em;
+                    @include g.base-font;
+                    color: g.$text-color;
+
+                    @include g.mq-max(ta) {
+                        margin-top: 0;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+
+        .reverse{
+            flex-direction: row-reverse;
+        }
+    }
+}

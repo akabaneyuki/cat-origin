@@ -1,0 +1,228 @@
+@use "../../../00_global/" as g;
+
+.c-inputText {
+  display: flex;
+  align-items: flex-end;
+
+  @include g.mq-max(ta) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &_label {
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
+    margin-bottom: 12px;
+    width: 216px;
+
+    @include g.mq-max(ta) {
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+
+    &-textarea {
+      margin-bottom: 175px;
+
+      @include g.mq-max(ta) {
+        margin-bottom: 10px;
+        max-width: fit-content;
+        line-height: 25px;
+        margin-bottom: 0px;
+      }
+
+      &>p {
+        line-height: 40px;
+
+        @include g.mq-max(ta) {
+          line-height: 25px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    &_title {
+      @include g.sub-font;
+      margin-right: 13px;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      font-size: 16px;
+      font-weight: 700;
+      color: g.$base-color;
+    }
+
+    &_required {
+      @include g.sub-font;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 1px;
+      padding-left: 0.1em;
+      width: 67px;
+      height: 21px;
+      border-radius: 11px;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      font-size: 16px;
+      color: #ffffff;
+      background-color: g.$base-color;
+    }
+  }
+
+  &_input {
+    width: calc(100% - 248px);
+
+    @include g.mq-max(ta) {
+      width: 100%;
+    }
+
+    &Select {
+      padding: 11px 12px;
+      line-height: 25px;
+      letter-spacing: .1em;
+      font-size: 16px;
+      font-weight: 400;
+      color: #3e3733;
+
+      @include g.mq-max(ta) {
+        padding: 9px 5px;
+      }
+    }
+
+    .wpcf7-form-control-wrap {
+      display: flex;
+      flex-direction: column-reverse;
+      @include g.base-font;
+
+      .c-inputText_input_cont {
+        @include g.base-font;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        padding: 11px 12px;
+        width: 100%;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+        font-size: 16px;
+        font-weight: 400;
+        color: #3E3733;
+        background-color: #E9E4E1;
+
+        &::placeholder {
+          color: #83817F;
+        }
+
+        &-input {
+          max-width: 365px;
+
+          @include g.mq-max(ta) {
+            padding: 9px 5px;
+            max-width: none;
+          }
+        }
+
+        &-textarea {
+          resize: none;
+          overflow-y: auto;
+          max-width: 636px;
+          height: 215px;
+
+          @include g.mq-max(ta) {
+            max-width: none;
+            height: 219px;
+          }
+        }
+
+        &-readonly {
+          cursor: default;
+          background-color: transparent;
+        }
+      }
+
+      .wpcf7-not-valid-tip {
+        @include g.base-font;
+        margin-bottom: 3px;
+        line-height: 25px;
+        letter-spacing: 0.1em;
+        font-size: 16px;
+        font-weight: 500;
+        color: #E45C5C;
+      }
+    }
+  }
+}
+
+.c-inputText_select {
+  position: relative;
+  max-width: 365px !important;
+
+  @include g.mq-max(ta) {
+    max-width: 100% !important;
+  }
+
+  &_arrow {
+    position: absolute;
+  }
+}
+
+.select2-container {
+  max-width: 365px;
+
+  @include g.mq-max(ta) {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+.select2-selection--single {
+  border: none !important;
+  background-color: #E9E4E1 !important;
+  height: 47px !important;
+  font-size: 16px !important;
+}
+
+.select2-results__option--selectable {
+  background-color: #E9E4E1 !important;
+  font-size: 16px !important;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  color: #83817F !important;
+}
+
+.select2-search--dropdown {
+  display: none !important;
+}
+
+.select2-dropdown {
+  border: none !important;
+}
+
+.select2-selection__rendered {
+  color: #3E3733 !important;
+  line-height: 47px !important;
+}
+
+.select2-selection__arrow {
+  top: 50% !important;
+  right: 5px !important;
+  transform: translate(0%, -50%) !important;
+  width: 42px !important;
+  height: 39px !important;
+  background-image: url("./../images/contact/arrow.svg") !important;
+
+  @include g.mq-max(ta) {
+    width: 33px !important;
+    height: 31px !important;
+    background-size: cover;
+  }
+
+  & b {
+    display: none;
+  }
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+  @include g.base-font;
+}

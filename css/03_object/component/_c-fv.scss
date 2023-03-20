@@ -1,0 +1,130 @@
+@use "../../00_global/" as g;
+
+.c-fv {
+    padding: 0 20px;
+
+    @include g.mq_max(md){
+        padding: 0 12px;
+    }
+
+    &_inner{
+        position: relative;
+        margin: 40px auto;
+        max-width: 980px;
+        height: 241px;
+        border-radius: 20px;
+        background-color: #E0F4F4;
+
+        @include g.mq_max(md){
+            margin: 23px auto 22px;
+            height: 192px;
+            border-radius: 10px;
+        }
+    }
+
+    &_flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 903px;
+        padding-left: 150px;
+        margin: 0 0 0 auto;
+
+        @media screen and (max-width:900px) {
+            padding-left: 90px;
+        }
+
+        @media screen and (max-width:850px) {
+            padding-left: 60px;
+        }
+
+        @include g.mq_max(md){
+            flex-direction: column;
+            padding: 31px 20px 0;
+        }
+        
+        &_title{
+            font-size: g.$title-large;
+            font-weight: bold;
+            line-height: 1;
+            letter-spacing: .2em;
+            color: g.$base-color;
+            @include g.sub-font;
+
+            @include g.mq_max(md){
+                font-size: 26px;
+                letter-spacing: .1em;
+                line-height: 1.5384;
+            }
+        }
+        
+        &_people{
+            width: auto;
+            // width: 330px;
+            // object-fit: cover;
+            padding: 23px 64px 0 0;
+
+            @include g.mq_max(md){
+                padding: 0;
+                width: 164px;
+                height: 110px;
+                object-fit: cover;
+                object-position: top;
+                margin-top: 11px;
+            }
+        }
+
+        &_person{
+
+            @media screen and (max-width:850px) {
+                padding-right: 20px;
+            }
+
+            @include g.mq_max(md){
+                width: 131px;
+                padding: 0;
+            }
+        }
+
+        .pc-md{
+            @include g.mq_max(md){
+                display: none;
+            }
+        }
+
+        .md-sp{
+            @include g.mq_min(md){
+                display: none;
+            }
+        }
+    }
+
+    &_right{
+        position: absolute;
+        bottom: 0;
+        right: 254px;
+        width: auto;
+
+        @include g.mq_max(md){
+            object-fit: cover;
+            object-position: left;
+            right: 0;
+            width: 79px;
+            height: 71px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    &_left{
+        position: absolute;
+        top: 20px;
+        left: 12px;
+        width: auto;
+
+        @include g.mq_max(md){
+            height: 53px;
+            top: 0;
+            left: -2px;
+        }
+    }
+}

@@ -1,0 +1,443 @@
+@use "../../../00_global/" as g;
+
+.p-recruit_jobDescription {
+
+    &_inner{
+        padding: 110px 20px 189px;
+        margin: 0 auto;
+        max-width: 1020px;
+
+        @include g.mq-max(ta){
+            padding: 110px 12px;
+            max-width: 624px;
+        }
+    }
+    &_tab{
+        display: flex;
+        margin: 0 auto;
+        max-width: 980px;
+
+        @include g.mq-max(ta){
+            max-width: 292px;
+            justify-content: space-between;
+        }
+
+        &_wrapper{
+            
+            @include g.mq-max(ta){
+                padding: 21px 0;
+                background-color: g.$bg-gray;
+                border-radius: 10px;
+            }
+        }
+
+        &_place{
+            padding: 22px 12px;
+            color: g.$base-color;
+            @include g.sub-font;
+            text-align: center;
+            font-weight: bold;
+            font-size: g.$sub-text;
+            letter-spacing: .05em;
+            line-height: 1.4285;
+
+            &:first-of-type{
+                padding-top: 0;
+            }
+        }
+
+        li{
+            max-width: 490px;
+            width: 100%;
+            height: 60px;
+
+            @include g.mq-max(ta){
+                width: auto;
+                height: auto;
+            }
+        }
+
+        &_btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            @include g.sub-font;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            font-size: g.$highlight-text-small;
+            font-weight: bold;
+            line-height: 2;
+            letter-spacing: .05em;
+            background-color:#fff;
+            color: g.$base-color;
+            border: 2px solid g.$base-color;
+
+            @include g.mq-max(ta){
+                padding: 7px 22px;
+                width: auto;
+                height: auto;
+                line-height: 1.4285;
+                font-size: g.$sub-text;
+                border-radius: 28px;
+            }
+        }
+
+        /*liにactiveクラスがついた時の形状*/
+        li.active a{
+            background-color: g.$base-color;
+            color: #FFFFFF;
+        }
+    }
+
+    &_content{
+        max-width: 980px;
+        margin: 0 auto 142px;
+        padding: 47px 46px;
+        background-color: #F6FBFB;
+        display: none;
+
+        @include g.mq-max(ta){
+            margin-bottom: 110px;
+            padding: 45px 0 0;
+            background-color: transparent;
+        }
+
+        &_ttl{
+            margin-bottom: 47px;
+            @include g.sub-font;
+            color: g.$base-color;
+            font-size: g.$highlight-text-large;
+            font-weight: bold;
+            line-height: 1.66;
+            letter-spacing: .05em;
+
+            @include g.mq-max(ta){
+                margin-bottom: 9px;
+                letter-spacing: 0;
+                font-size: g.$base-text;
+                line-height: 2.1875;
+            }
+
+            span{
+                display: none;
+
+                @include g.mq-max(ta){
+                    display: block;
+                    font-size: g.$sub-text;
+                    letter-spacing: .05em;
+                    line-height: 1.428;
+                }
+            }
+        }
+
+        &_table {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            
+            @include g.mq-max(ta) {
+                padding: 28px 20px;
+                row-gap: 23px;
+                background-color: #F6FBFB;
+            }
+            
+            &_tr {
+                display: grid;
+                grid-template-columns: 225px 1fr;
+                border: solid 1px g.$base-color;
+                border-top: none;
+                
+                @include g.mq-max(ta) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    justify-content: center;
+                    border: none;
+                    border-bottom: solid 1px g.$base-color;
+                }
+
+                &:first-of-type{
+                    border-top: solid 1px g.$base-color;
+
+                    @include g.mq-max(ta) {
+                        border-top: none;
+                    }
+                }
+
+                &:last-of-type{
+                    .p-recruit_jobDescription_content_table_tr_th{
+                        border-bottom: none;
+                    }
+                }
+                
+                &_th {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    letter-spacing: .1em;
+                    background-color: g.$base-color;
+                    border-bottom: 1px solid #ffffff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: #ffffff;
+                    @include g.base-font;
+                    
+                    @include g.mq-max(ta) {
+                        padding: 0;
+                        justify-content: flex-start;
+                        border-bottom: none;
+                        color: g.$base-color;
+                        font-weight: bold;
+                        background-color: transparent;
+                    }
+                }
+                
+                &_td {
+                    padding: 8px 20px;
+                    letter-spacing: .1em;
+                    line-height: 1.43;
+                    color: g.$text-color;
+                    font-size: 16px;
+                    @include g.base-font;
+                    
+                    @include g.mq-max(ta) {
+                        padding: 13px 0;
+                        text-align: justify;
+                        line-height: 1.4375;
+                        font-weight: 400;
+                    }
+                    
+                    &_bold {
+                        font-weight: 700;
+                        
+                        @include g.mq-max(ta) {
+                            font-weight: 500;
+                        }
+                    }
+                    
+                    & a {
+                        color: g.$text-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &-sp{
+            display: none;
+
+            &:first-of-type{
+                margin-bottom: 73px;
+            }
+        }
+    }
+
+    /*タブ中身表示*/
+    .is-active {
+        display: block;/*表示*/
+        animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    &_flow{
+        padding: 36px 47px 25px;
+        background-color: g.$bg-gray;
+        border-radius: 20px;
+
+        @include g.mq-max(ta) {
+            padding: 39px 20px;
+        }
+
+        &_ttl{
+            padding-left: 9px;
+            @include g.sub-font;
+            color: g.$base-color;
+            font-size: g.$highlight-text-large;
+            font-weight: bold;
+            letter-spacing: .05em;
+            line-height: 1.666;
+
+            @include g.mq-max(ta) {
+                text-align: center;
+                font-size: 26px;
+            }
+        }
+
+        &_content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include g.mq-max(ta) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &_circles{
+                display: flex;
+
+                    &_circle {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding-bottom: 10px;
+                        margin: 0 0 7px;
+                        width: 125px;
+                        height: 125px;
+                        border-radius: 50%;
+                        background-color: #ffffff;
+    
+                        @include g.mq-max(ta) {
+                            margin: 0 auto 13px;
+                            padding: 0;
+                            margin: 0;
+                            width: 85px;
+                            height: 85px;
+                        }
+
+                        &_wrapper {
+                            margin: 0 39px 0 0;
+                            padding: 35px 0 0;
+                            z-index: 10;
+            
+                            @include g.mq-max(ta) {
+                                margin-right: 28px;
+                                padding: 27px 0;
+                            }
+
+                            &:last-of-type{
+                                margin: 0;
+                            }
+                        }
+    
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            top: 50%;
+                            right: -78%;
+                            transform: translate(0%, -50%);
+                            width: 92%;
+                            height: 10px;
+                            background-color: #fff;
+                            z-index: -1;
+    
+                            @include g.mq-max(ta) {
+                                height: 4px;
+                            }
+                        }
+    
+                        &03 {
+
+                            &::after {
+                                width: 0px;
+                                height: 0px;
+                            }
+                        }
+    
+                        &_idx {
+                            padding-bottom: 4px;
+                            margin-bottom: 21px;
+                            color: g.$base-color;
+                            font-size: g.$highlight-text-large;
+                            text-align: center;
+                            font-weight: 700;
+                            letter-spacing: .05em;
+                            line-height: 1;
+                            @include g.sub-font;
+                            border-bottom: 2px solid g.$base-color;
+    
+                            @include g.mq-max(ta) {
+                                padding-bottom: 3px;
+                                margin-bottom: 3px;
+                            }
+                        }
+    
+                        &_name {
+                            justify-items: center;
+                            align-items: center;
+                            color: g.$base-color;
+                            font-size: g.$highlight-text-large;
+                            text-align: center;
+                            font-weight: 700;
+                            letter-spacing: .05em;
+                            line-height: 1;
+                            @include g.sub-font;
+    
+                            @include g.mq-max(ta) {
+                                font-size: g.$base-text;
+                                line-height: 1.25;
+                                width: 100%;
+                                max-width: 296px;
+                                letter-spacing: .1em;
+                            }
+    
+                            & span {
+                                display: block;
+    
+                                @include g.mq-max(ta) {
+                                    display: inline;
+                                }
+                            }
+                        }
+                    }
+    
+                    &_text {
+                        font-size: 14px;
+                        letter-spacing: .05em;
+                        line-height: 1.57;
+                        @include g.base-font;
+                        color: #231815;
+                        text-align: center;
+    
+                        @include g.mq-max(ta) {
+                            display: none;
+                        }
+                    }
+            }
+            
+            &_contact{
+                &_txt{
+                    color: g.$text-color;
+                    font-size: g.$base-text;
+                    line-height: 1.875;
+                    letter-spacing: .1em;
+                    max-width: 300px;
+                    margin: 0 auto;
+                    text-align: center;
+                    @include g.base-font;
+
+                    @media screen and (max-width:420px) {
+                        max-width: 320px;
+                    }
+                }
+            }
+        }
+    }
+
+    .c-catchcopy{
+        margin: 0 auto 70px;
+
+        @include g.mq-max(ta){
+            margin-bottom: 45px;
+        }
+    }
+
+    .c-button{
+        margin: 22px auto 0;
+
+        @include g.mq-max(ta){
+            margin-top: 23px;
+        }
+
+        &_inner{
+            padding: 4px 21px;
+
+            @include g.mq-max(ta){
+                padding: 8px 50px;
+            }
+        }
+    }
+}

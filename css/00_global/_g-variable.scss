@@ -1,0 +1,27 @@
+$base-color: #4BBEBF;
+$text-color: #3E3733;
+$bg-gray: #FAF6F4;
+
+$breakpoint-max: (
+  "sp": "(max-width: 599px)",
+  "md": "(max-width: 768px)",
+  "ta": "(max-width: 1024px)",
+  "sl": "(max-width: 1233px)",
+  "lg": "(max-width: 1366px)",
+  "pc": "(max-width: 1920px)",
+);
+$breakpoint-min: (
+  "sp": "(min-width: 600px)",
+  "md": "(min-width: 769px)",
+  "ta": "(min-width: 1025px)",
+  "sl": "(min-width: 1234px)",
+  "lg": "(min-width: 1367px)",
+  "pc": "(min-width: 1921px)",
+);
+
+$title-large: 40px;
+$title-small: 30px;
+$highlight-text-large: 24px;
+$highlight-text-small: 20px;
+$base-text: 16px;
+$sub-text: 14px;

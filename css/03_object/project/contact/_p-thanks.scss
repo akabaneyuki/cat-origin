@@ -1,0 +1,79 @@
+@use "../../../00_global/" as g;
+
+.p-thanks {
+  margin: 0 auto;
+  max-width: 974px;
+
+  &_wrap {
+    margin: 141px 11px 110px;
+
+    @include g.mq-max(ta) {
+      margin-top: 72px;
+    }
+  }
+
+  &_head {
+    @include g.sub-font;
+    margin-bottom: 11px;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 24px;
+    color: g.$base-color;
+
+    @include g.mq-max(ta) {
+      margin-top: 80px;
+      margin-bottom: 27px;
+      letter-spacing: .05em;
+      font-size: 26px;
+    }
+
+    br {
+      display: none;
+
+      @include g.mq-max(ta) {
+        display: inline;
+      }
+    }
+  }
+
+  &_sub {
+    @include g.base-font;
+    margin-bottom: 69px;
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    color: g.$base-color;
+
+    @include g.mq-max(ta) {
+      margin-bottom: 27px;
+      line-height: 25px;
+      letter-spacing: .05em;
+      text-align: left;
+    }
+  }
+
+  &_item {
+    @include g.base-font;
+    margin-bottom: 25px;
+    line-height: 25px;
+    letter-spacing: 0.1em;
+    font-size: 16px;
+    color: g.$text-color;
+    text-align: justify;
+
+    &-mbLg {
+      margin-bottom: 69px;
+    }
+  }
+
+  &_btn {
+    margin: 67px auto;
+
+    @include g.mq-max(ta) {
+      margin: 71px auto;
+    }
+  }
+}
