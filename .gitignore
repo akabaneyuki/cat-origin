@@ -1,0 +1,7 @@
+**/.vscode/**
+style.min.css
+**/css/*.map
+**/css/*.min.css
+.DS_Store
+desktop.ini
+Thumb.db
